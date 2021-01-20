@@ -102,7 +102,7 @@ Fragment
        import andorid.view.View
        import android.view.ViewGroup
        
-       // Inflator feature
+       // Inflater feature
        import android.view.LayoutInflater
        
        class TitleFragment: Fragment(){
@@ -118,7 +118,30 @@ Fragment
       
        }
        
+6. create another fragment called InfoFragment. We try not to use databinding this time.
+
+       package com.example.android.katesapp
        
+       [default modules]
+       import androix.fragment.app.Fragment
+       import android.os.Bundle
+       
+       [inflater feature]
+       import android.view.LayoutInflator
+       
+       [view modules]
+       import android.view.View
+       import android.view.ViewGroup
+       
+       class InfoFragment: Fragment(){
+       
+         override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?{
+         
+           return inflater.inflate(R.layout.fragment_info, container, false)
+         
+         }
+       
+       }
        
 
 
