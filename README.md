@@ -118,7 +118,7 @@ Fragment
       
        }
        
-6. create another fragment called InfoFragment. We try not to use databinding this time.
+6. create another fragment called InfoFragment.kt, We try not to use databinding this time.
 
        package com.example.android.katesapp
        
@@ -142,7 +142,28 @@ Fragment
          }
        
        }
+   
+7. the UI layout for fragement called fragment_info.xml related with code called Info InfoFragment.kt
+   And we use ScrollView instead of plain layout style, then a ConstraintLayout inside it.
+
+       <?xml encoding="utf-8"?>
        
+       <ScrollView
+       
+         xmlns:android=""
+         xmlns:app=""
+         xmlns:tools=""
+         tools:context="com.example.android.katesapp.InfoFragment"
+       
+         <androidx.constraintlayout.widget.ConstrainLayout
+         
+            <ImageView/>
+            
+            <TextView/>
+         
+         />
+ 
+       />
 
 
 
