@@ -2,7 +2,7 @@
 Fragment
 
 
-1. add <fragment> UI tag in layout.
+1. add <fragment> UI tag in layout called activity_main.xml.
   
        <?xml encoding="utf-8" xmlns:android="" xmlns:app="">
        
