@@ -34,3 +34,26 @@ Fragment
           />
           
         </layout>
+
+  3. add Button and ImageView in fragment_title.xml.
+  
+          <?xml encoding="utf-8"?>
+        
+          <layout
+            xmlns:android=""
+            xmlns:app=""
+            xmlns:tools=""
+            tools:context="com.example.android.navigation.TitleFragment"
+          >
+          
+            <android.constraintlayout.widget.ConstraintLayout
+              android:id="@+id/titleConstraint"
+              
+              <Button/>
+              <ImageView/>>
+              
+            />
+          
+         </layout>
+  
+  
