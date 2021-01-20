@@ -74,6 +74,8 @@ Fragment
           
             <android.constraintlayout.widget.ConstraintLayout
               android:id="@+id/titleConstraint"
+              android:layout_width="match_parent"
+              androif:layout_height="match_parent"
               
               <Button/>
               <ImageView/>>
@@ -156,6 +158,8 @@ Fragment
          tools:context="com.example.android.katesapp.InfoFragment"
        
          <androidx.constraintlayout.widget.ConstrainLayout
+            android:layout_width="match_parent"
+            androif:layout_height="wrap_content"
          
             <ImageView/>
             
