@@ -37,7 +37,7 @@ Fragment
           xmlns:android=""
           xmlns:app=""
           xmlns:tools=""
-          tools:context="com.example.android.navigation.TitleFragment"
+          tools:context="com.example.android.katesapp.TitleFragment"
         >
           
           <android.constraintlayout.widget.ConstraintLayout
@@ -56,7 +56,7 @@ Fragment
         >
           <fragment
             android:id="@id/titleFragment"
-            android:name="com.example.android.navigation.TitleFragment"
+            android:name="com.example.android.katesapp.TitleFragment"
           />
         </LnearLayout>
        </layout>
@@ -69,7 +69,7 @@ Fragment
             xmlns:android=""
             xmlns:app=""
             xmlns:tools=""
-            tools:context="com.example.android.navigation.TitleFragment"
+            tools:context="com.example.android.katesapp.TitleFragment"
           >
           
             <android.constraintlayout.widget.ConstraintLayout
@@ -85,33 +85,42 @@ Fragment
 
         }
         
-5. use DataBindingUtil.inflate to inflate (or return) the titleFragment in onCreateView phase in MainActivity.
+5. use DataBindingUtil.inflate to inflate (or return) the titleFragment in onCreateView phase in TitleFragment.kt, code the TitleFragment which is a subclass of the Fragment class.
 
-        package com.example.android.katesapp
-        
-        [default modules]
-        import androidx.appcompat.app.AppCompatActivity
-        import android.os.Bundle
-        
-        [add databinding module]
-        import androidx.databinding.DtatBindingUtil
-        
-        [add navigation module]
-        import com.example.android.navigation.databinding.ActivityDataBinding
-        
-        class MainActivity: AppCompatActivity(){
-          
-          override fun onCreate(saveInstanceState: Bundle?){
-          
-            super.onCreate(saveInstanceState)
-            val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
-            
-            // TODO:
-            // inflate
-            
-          
-          }
-        
-        }
+       package com.example.android.katesapp
+       
+       [default modules]
+       import androidx.fragment.app.Fragment
+       import android.os.Bundle
+       
+       // Mian feature hereby for Fragment
+       [databinding modules]
+       import androidx.databinding.DataBindingUtil
+       import com.example.android.katesapp.databinding.FragmentTitleBinding
+       
+       [view modules]
+       import andorid.view.View
+       import android.view.ViewGroup
+       
+       // Inflator feature
+       import android.view.LayoutInflater
+       
+       class TitleFragment: Fragment(){
+       
+         override fun onCreateView(inflator: LayoutInfator, container: ViewGroup?, savediInstanceState: Bundle?): View?{
+         
+           val binding = DataBindingUtil.inflate<FragmentTitleBinding>(inflater, R.layout.fragment_title, container, false)
+           
+           // means fragment_title.xml layout
+           return binding.root
+         
+         }
+      
+       }
+       
+       
+       
+
+
 
 
