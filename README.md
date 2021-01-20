@@ -170,5 +170,8 @@ Fragment
        />
 
 
+8. set up the properties of UI element examples:
+
+    https://github.com/google-developer-training/android-kotlin-fundamentals-apps/blob/master/AndroidTriviaFragment/app/src/main/res/layout/fragment_about.xml
 
 
